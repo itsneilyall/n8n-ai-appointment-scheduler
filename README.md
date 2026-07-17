@@ -255,6 +255,3 @@ Session state is keyed by `sessionId` in browser localStorage — use an incogni
 
 ---
 
-## License
-
-MIT
