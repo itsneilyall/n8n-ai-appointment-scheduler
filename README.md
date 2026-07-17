@@ -255,4 +255,6 @@ Session state is keyed by `sessionId` in browser localStorage — use an incogni
 
 ---
 
-Layered guardrails over an autonomous LLM booking agent: deterministic filters before model calls, an intent gate, code-enforced business rules, and non-fatal error handling throughout.
+> *Layered guardrails over an autonomous LLM booking agent: deterministic filters
+> before model calls, an intent gate, code-enforced business rules, and non-fatal
+> error handling throughout.*
