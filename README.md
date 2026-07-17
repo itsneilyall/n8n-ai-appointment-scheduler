@@ -216,7 +216,7 @@ GENERIC_TIMEZONE=Asia/Manila
 WEBHOOK_URL=https://<your-instance-domain>
 ```
 
-Without `GENERIC_TIMEZONE`, `$now` resolves in the instance's default zone — appointments land hours off, and before 8 AM local the agent believes it's still yesterday.
+Without `GENERIC_TIMEZONE`, `$now` resolves in the instance's default zone, appointments land hours off, and before 8 AM local the agent believes it's still yesterday.
 
 **2. Google Calendar** - create a calendar, put its ID on the four calendar tool nodes.
 
@@ -231,7 +231,7 @@ Without `GENERIC_TIMEZONE`, `$now` resolves in the instance's default zone — a
 
 **5. Adjust to your clinic** - office hours live in the `HOURS` table at the top of `Validate Slot` (minutes from midnight, `[open, close]`, `null` for closed). The agent's system message carries the patient-facing copy, the timezone, and the failure phone number.
 
-**6. Activate and test through the public chat URL** — not the editor. `$getWorkflowStaticData` only persists between production executions, so the rate limiter and state gate appear broken in manual runs.
+**6. Activate and test through the public chat URL** - not the editor. `$getWorkflowStaticData` only persists between production executions, so the rate limiter and state gate appear broken in manual runs.
 
 ---
 
