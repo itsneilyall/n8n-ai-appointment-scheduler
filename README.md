@@ -118,7 +118,7 @@ Per-session state in `$getWorkflowStaticData('global')`:
 - `abuseScore >= 5` → 15-minute cooldown, score resets on expiry
 
 ### ② Rule-based filter
-A **greeting fast-path** answers `hi` / `hello` / `good morning` instantly — zero LLM calls for the most common message received. The abuse group catches instruction-override phrasing, persona hijacks, jailbreak vocabulary, and code/joke requests.
+A **greeting fast-path** answers `hi` / `hello` / `good morning` instantly, zero LLM calls for the most common message received. The abuse group catches instruction-override phrasing, persona hijacks, jailbreak vocabulary, and code/joke requests.
 
 Math-spam detection is **phone-number-aware**. "Is this string made only of math characters?" matches a bare phone number, because digits are math characters. Detection requires an operator *between* digits, behind an explicit phone guard that must run first, `+` and `-` are both operators and phone punctuation.
 
@@ -172,7 +172,7 @@ Ordered procedures, not descriptions: availability gated on `Validate Slot`; a b
 
 The classifier runs on **every** message and does one bounded thing: read a sentence, emit one JSON field. That's where token spend concentrates and mini is genuinely fine at it.
 
-The agent holds seven tools and three multi-step procedures. On a mini-class model it failed characteristically: it invented an exact confirmation phrase, *"reply exactly: 'Yes, cancel'"* — then string-matched against it and rejected `yes, cancel` for casing. Same prompt on `gpt-5` didn't reproduce it. The failure was model capability, not instruction ambiguity.
+The agent holds seven tools and three multi-step procedures. On a mini-class model it failed characteristically: it invented an exact confirmation phrase, *"reply exactly: 'Yes, cancel'"*, then string-matched against it and rejected `yes, cancel` for casing. Same prompt on `gpt-5` didn't reproduce it. The failure was model capability, not instruction ambiguity.
 
 ---
 
